@@ -24,6 +24,21 @@ public class Array01 {
 		for(int i=0; i<5; i++)
 			System.out.println(nArr[i]);	//위 방식의 축약형
 		
+		System.out.println("===========");
+		
+		int[] Arr = new int[5];
+		
+		Arr[0] = 60;
+		Arr[1] = 70;
+		Arr[2] = 80;
+		Arr[3] = 90;
+		Arr[4] = 100;
+		
+		for (int i=0; i<5; i++) {
+			System.out.println(Arr[i]);
+		}
+		
+		
 		
 	}
 

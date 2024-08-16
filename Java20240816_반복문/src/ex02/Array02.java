@@ -21,7 +21,7 @@ public class Array02 {
 		
 //		입력시 반복문
 		for(int i=0; i<5; i++) {
-			System.out.printf("%d번째 학생의 com점수 입력 >> ", i+1);
+			System.out.printf("%d번째 학생의 com점수 입력 >> ", i+1); //%d 10진 정수 출력
 			com[i] = sc.nextInt();
 		}	
 		
@@ -76,7 +76,6 @@ public class Array02 {
 			if(com[i]>max);
 				max = com[i];
 		}
-		
 		
 		
 	}

@@ -11,13 +11,13 @@ public class ForEx01 {
 		//초기값 -> 끝값(조건) -> 문장 -> 증가
 //		
 //		for(int i=0; i<=10; i++) {
-//			sum += i; //sum = sum+i	// sum = 15
+//			sum += i; //sum = sum+i	
 //		}
 		
 		//1 ~ 10까지의 합
-//		for(int i=0; i<=10; i++) {
-//			sum += i; //sum = sum+i
-//		}
+		for(int i=0; i<=10; i++) {
+			sum += i; //sum = sum+i
+		}
 		
 		//1 ~ 10까지에서 짝수의 합 >> 30
 		for(int i=0; i<=10; i+=2) {	//i=i+2 -> i+=2
