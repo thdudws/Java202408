@@ -73,6 +73,7 @@ public class Array03 {
 		
 		System.out.println("최소값 : " + min);
 		
+		
 		//축약형
 //		int max, min;
 //		max = min = com[0]; 1번째 방법
