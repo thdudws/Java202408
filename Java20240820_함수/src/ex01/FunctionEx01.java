@@ -13,7 +13,7 @@ public class FunctionEx01 {
 		else System.out.println("짝수");
 		
 	}
-		
+		//반환값 없는 거 void로 
 	
 		//void : 반환타입,  함수명 : func1, 매개변수 : ()
 		static void func1 () {	//함수
