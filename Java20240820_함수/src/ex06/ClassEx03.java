@@ -6,7 +6,7 @@ public class ClassEx03 {
 
 	public static void main(String[] args) {
 		
-		Book b2 = new Book();
+		Book b2 = new Book();	//객체(제품) 생성
 		
 		b2.제목 = "달러구트의 꿈 백화점";
 		b2.저자 = "이미예";
@@ -23,13 +23,14 @@ public class ClassEx03 {
 }
 
 class Book {
-	String 제목;
+	//속성(변수) 기능(메서드)
+	String 제목;	//필드선언 *클래스 블록안에서 선언시
 	String 저자;
 	int 가격;
 	int 재고수량;
 	int 판매누적수량;
 	
-	void 판매(int stock) {	
+	void 판매(int stock) {	//메서드	
 		재고수량 -= stock;
 		판매누적수량 += stock;
 	}
