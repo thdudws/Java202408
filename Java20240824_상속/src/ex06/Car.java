@@ -21,6 +21,7 @@ public class Car extends Vehicle {
 		super.printInfo();
 		System.out.println("연료 타입 : " + fuelType);
 		System.out.println("탑승 인원 : " + seatingCapacity);
+		System.out.println("정비 비용 : " + calculateMaintenanceCost());
 	}
 	
 //	↑
