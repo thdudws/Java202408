@@ -1,23 +1,23 @@
 package ex03;
 
-public class Television implements RemoteControl {
+public class Audio implements RemoteControl {
 
 	//필드
 	private int volume;
-
+	
 	//turnOn() 추상 메서드 오버라이딩
 	@Override
 	public void trunOn() {
-		System.out.println("TV를 켭니다.");
+		System.out.println("Audio를 켭니다.");
 	}
 
 	//turnOff() 추상 메서드 오버라이딩
 	@Override
 	public void trunOff() {
-		System.out.println("TV를 끕니다.");
+		System.out.println("Audio를 끕니다.");
 	}
 
-	//setVolume() 추상 메서드 오버라이딩
+	//setVolum() 추상 메서드 오버라이딩
 	@Override
 	public void setVolum(int volume) {
 		if(volume > RemoteControl.MAX_VOLUME) {
@@ -27,7 +27,9 @@ public class Television implements RemoteControl {
 		}else {
 			this.volume = volume;
 		}
-		System.out.println("현재 TV 볼륨 : " + this.volume);
+		System.out.println("현재 Audio 볼륨 : " + this.volume);
 	}
+
+	
 	
 }

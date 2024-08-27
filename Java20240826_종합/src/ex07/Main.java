@@ -12,6 +12,8 @@ public class Main {
 		func(new ClassA());
 		func(new ClassA());
 		
+		
+		
 	}
 	
 	static void func(ClassA a) {
