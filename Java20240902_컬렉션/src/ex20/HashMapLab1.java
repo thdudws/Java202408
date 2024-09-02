@@ -43,12 +43,15 @@ public class HashMapLab1 {
 		
 		while(true) {
 			System.out.println("나라 이름을 입력하세요 : ");
-			String na = sc.nextLine();
+			String nation = sc.nextLine();
 			
 			System.out.println("인구 수를 입력하세요 : ");
 			int pup = Integer.parseInt(sc.nextLine());
 			
-			map.put(na, pup);
+			if(map.containsKey(nation)) {
+				System.out.println("나라명 " + nation + "는 이미 저장되었습니다");
+			}
+			map.put(nation, pup);
 			count++;
 			
 			if(count >= MAX) break;
