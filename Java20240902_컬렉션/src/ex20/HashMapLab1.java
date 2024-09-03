@@ -26,22 +26,15 @@ HashMap 객체에 5개까지 저장한 후에 출력하고 종료한다.
  */
 
 public class HashMapLab1 {
-
-	@Override
-	public boolean equals(Object obj) {
-		System.out.println("재정의 --------------------");
-		return super.equals(obj);
-	}
 	
 	public static void main(String[] args) {
 		
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		final int MAX = 5;
-		int count = 0;
 		
 		Scanner sc = new Scanner(System.in);
 		
-		while(true) {
+		while(map.size()<MAX) {
 			System.out.println("나라 이름을 입력하세요 : ");
 			String nation = sc.nextLine();
 			
@@ -50,11 +43,13 @@ public class HashMapLab1 {
 			
 			if(map.containsKey(nation)) {
 				System.out.println("나라명 " + nation + "는 이미 저장되었습니다");
+				continue;
 			}
-			map.put(nation, pup);
-			count++;
 			
-			if(count >= MAX) break;
+			map.put(nation, pup);
+//			count++;
+			
+//			if(count >= MAX) break;
 			
 			System.out.println("*저장되었습니다.*");
 			
