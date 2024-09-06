@@ -21,7 +21,7 @@ public class 복습 {
 			System.out.print(com[i] + ", ");
 		}
 		
-		System.out.println();
+		System.out.println();	//줄바꿈
 		
 		//입력한 데이터의 역순으로 출력
 		System.out.print("역순 출력 : ");

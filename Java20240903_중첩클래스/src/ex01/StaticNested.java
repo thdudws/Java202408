@@ -6,11 +6,13 @@ class Outer {
 	
 	private int age = 10;
 	
-	static class Nested1 {	//정적 중첩클래스
+	static class Nested1 {	//정적(static) 중첩클래스
+		
 		void add(int n) {
 			num += n;
 			//age++
 		}
+		
 	}
 	
 	static class Nested2 {

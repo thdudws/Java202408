@@ -27,6 +27,7 @@ class Papers {
 //		
 //		return p;
 		
+		//익명클래스 -> 람다식으로 구현
 		return () -> System.out.println(message);
 	
 	}

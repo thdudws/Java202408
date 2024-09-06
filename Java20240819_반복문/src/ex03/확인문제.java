@@ -6,50 +6,45 @@ public class 확인문제 {
 
 	public static void main(String[] args) {
 
-		//while문과 Scanner nextLine() 메소드를 사용하여 키보드로 입력받아 
-		//예금, 출금, 조회, 종료 기능을 제공하는 코드를 작성해 보시오.
+		int balance = 0;
+		int deposit = 0;
+		int withdrawal = 0;
 		
-		Scanner sc = new Scanner(System.in);
-
-		boolean bank = true;
+		boolean flag = true;
 		
-		int deposit = 0; //예금
-		int withdrawal = 0;	//출금
-		int balance = 0;	//잔고
+		while(flag) {
+			System.out.println("-----------------------------------");
+			System.out.println("1.예금 : 2. 출금 : 3. 잔고 : 4. 종료");
+			System.out.println("-----------------------------------");
 	
-		
-		while (bank) {
-			System.out.println("-----------------------------------");
-			System.out.println("1. 예금 : 2. 출금 : 3. 잔고 : 4. 종료;");
-			System.out.println("-----------------------------------");
-			System.out.print("선택 > ");
+			Scanner sc = new Scanner(System.in);
 			
-			String strNum = sc.nextLine();
+			System.out.println("선택 > ");
+			int num = Integer.parseInt(sc.nextLine());
 			
-			if(strNum.equals("1")) {
-			
-				System.out.print("예금액 > ");
-				deposit =  sc.nextInt();
+			switch(num) {
+			case 1 :
+				System.out.println("예금액 > ");
+				deposit = Integer.parseInt(sc.nextLine());
 				balance += deposit;
-				
-			}else if(strNum.equals("2")) {
-				
-				System.out.print("출금액 > ");
-				withdrawal = sc.nextInt();
+				break;
+			case 2 :
+				System.out.println("출금액 > ");
+				withdrawal = Integer.parseInt(sc.nextLine());
 				balance -= withdrawal;
-				
-			}else if(strNum.equals("3")) { 
+				break;
+			case 3 :
 				System.out.println("잔고 > " + balance);
-				
-			}else if(strNum.equals("4")) { 
-				bank = false;
-			}else 
+				break;
+			case 4 :
+				flag = false;
+				break;
+			default :
 				System.out.println("1~4 사이의 숫자만 입력하세요");
-			
+			}
 		}
+		
 		System.out.println("프로그램 종료");
-		
-		
 	}
 
 }

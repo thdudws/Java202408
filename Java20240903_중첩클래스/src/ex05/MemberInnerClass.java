@@ -12,17 +12,10 @@ class Papers {
 	public Papers(String message) {this.message = message;}
 	
 	public Printable getPrinter() {	//반환타입 : Printable -> Printable 구현한 클래스만 반환한다.
-		return new Printer2();
+		return new Printer();
 	}
 	
 	private class Printer implements Printable {	//멤버 이너 클래스
-		@Override
-		public void print() {
-			System.out.println(message);
-		}
-	}
-	
-	private class Printer2 implements Printable {	//멤버 이너 클래스
 		@Override
 		public void print() {
 			System.out.println(message);

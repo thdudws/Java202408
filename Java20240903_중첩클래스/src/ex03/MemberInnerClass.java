@@ -17,7 +17,9 @@ class SendMessage {
 
 class Network {
 	public void message(String content) {
+		
 		SendMessage message = new SendMessage(content);
+		
 		System.out.println(message.getMsg());
 	}
 }

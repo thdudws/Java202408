@@ -6,7 +6,7 @@ package ex02;
 class Outer {
 	private int num = 0;	//인스턴스 변수
 	
-	class Member {
+	class Member { //Outer 클래스안에서만 사용
 		void add(int n) {num = n;}
 		int get() {return num;}
 	}

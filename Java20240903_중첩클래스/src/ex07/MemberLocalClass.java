@@ -4,8 +4,10 @@ import java.security.PublicKey;
 
 //멤버로컬클래스 생성
 
+
 interface  Printable {
 	void print();
+	void print2();
 }
 
 class Papers {
@@ -27,10 +29,14 @@ class Papers {
 //		
 //		return p;
 		
-		return new Printable() {	//익명 클래스
+		return new Printable() {	//익명클래스
 			@Override
 			public void print() {
 				System.out.println(message);
+			}
+			
+			@Override
+			public void print2() {
 			}
 		};
 		
