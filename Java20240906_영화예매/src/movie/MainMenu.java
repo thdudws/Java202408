@@ -60,7 +60,7 @@ public class MainMenu extends AbstractMenu {
 			
 			System.out.print("예매할 영화를 선택하세요 : ");
 			
-			String movieId = sc.nextLine();
+			String movieId = sc.nextLine();	// <--> readLine(); 한줄 전체 읽어오기
 			Movie movie = Movie.findAll(movieId);	//예매 영화 선택
 			
 			//예매된 영화 좌석 현황
