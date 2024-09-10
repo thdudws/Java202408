@@ -68,7 +68,7 @@ public class Movie {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
+		}finally { //무조건 실행 예외가 발생하지않더라도
 			try {
 				br.close();
 			} catch (IOException e) {
@@ -101,6 +101,7 @@ public class Movie {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		br.close();
 		return movies;
 
@@ -119,8 +120,9 @@ public class Movie {
 			// 파일을 읽기 위해 BufferedReader를 FileReader로 초기화
 			br = new BufferedReader(new FileReader(file));
 
-			// 파일의 모든 줄을 읽음 (1725612846,에이리언:로문룰스,공포)
+			// 파일의 한 줄 전체를 읽음 (1725612846,에이리언:로문룰스,공포)
 			while ((line = br.readLine()) != null) {
+				
 				String[] temp = line.split(","); 
 				// 각 줄을 쉼표(,)로 구분하여 배열에 저장
 				/* temp[0] = 1725612846
@@ -128,7 +130,8 @@ public class Movie {
 				 * temp[2] = 공포
 				 * id -> 1725612846
 				 */
-				if (movieId.equals(temp[0])) { // movieId가 첫 번째 요소(temp[0])와 같으면 해당 줄 삭제
+				
+				if (movieId.equals(temp[0])) { //movieId가 첫 번째 요소(temp[0])와 같으면 해당 줄 삭제
 					continue; 				   //continue로 다음 줄로 넘어감
 				}
 				text += line + "\n";		   //삭제되지 않은 줄은 text에 추가
@@ -138,11 +141,11 @@ public class Movie {
  				 * 1725842197,비틀쥬스 비틀쥬스,코미디 + "\n"
 				 */
 			}
+			
 			br.close();	//BufferedReader를 닫음
 
 			FileWriter fw = new FileWriter(file);
 			fw.write(text);		//새로운 내용으로 파일을 덮어씀
-			
 			fw.close();			//FileWriter를 닫음
 
 		} catch (Exception e) {

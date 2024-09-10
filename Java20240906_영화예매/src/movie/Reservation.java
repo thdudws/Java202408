@@ -14,7 +14,11 @@ public class Reservation {
 	private long movieid;
 	private String movieTitle;
 	private	String SeatName;
-	
+
+	/*file 리소스 객체
+	 * 사용을 위해서는 열어야(open) 하며 사용이 끝나면 닫아(close)야 한다.
+	 * finally는 예외 발생 여부와 상관없이 안전하게 close 가능
+	 */
 	public static final File file = new File("src/movie/reservation.txt");
 	
 	public String getSeatName() {
@@ -24,8 +28,6 @@ public class Reservation {
 	public long getId() {
 		return id;
 	}
-
-
 
 	public Reservation(long id, long movieid, String movieTitle, String SeatName) {
 		this.id = id;
@@ -40,10 +42,11 @@ public class Reservation {
 
 	@Override
 	public String toString() {
-//		return "영화 : " + movieTitle + "좌석번호 : " + SeatName;
+//		return "영화 : " + movieTitle + "좌석번호 : " + SeatName;	//다른 방식
 		return String.format("영화 : %s, 좌석번호 : %s", movieTitle, SeatName);
 	}
 
+	//예약한 번호 찾기
 	public static Reservation findById(String reservationId) {
 		Reservation reservation = null;
 		BufferedReader br = null;
@@ -73,6 +76,7 @@ public class Reservation {
 		return reservation;
 	}
 
+	//예약 취소
 	public static Reservation delete(String reservationId) {
 		Reservation reservation = null;
 		BufferedReader bf = null;
@@ -110,7 +114,7 @@ public class Reservation {
 		return reservation;
 	}
 
-	//movieId(영화 ID) 해당하는 예약 현황을 보여줘
+	//movieId(영화 ID) 해당하는 예약 현황을 보여줌
 	public static ArrayList<Reservation> findMovieId(String movieId) {
 		ArrayList<Reservation> reservations = new ArrayList<Reservation>();
 		
@@ -166,7 +170,6 @@ public class Reservation {
 		return String.format("%d,%d,%s,%s", id, movieid, movieTitle, SeatName);
 	}
 
-	
 
 }
 

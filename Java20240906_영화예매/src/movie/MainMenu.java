@@ -51,11 +51,12 @@ public class MainMenu extends AbstractMenu {
 		}
 	}
 
+	//영화 예매하기
 	private void reserve() {
 		
 		try {
 			List<Movie> movies = Movie.findAll();	//영화 목록 보여주기 한개(단수)가 아니라 List에 담아서 가져옴
-			for(Movie movie : movies)
+			for(Movie movie : movies) //배열을 사용할때 주로 쓰는 for문 방식
 				System.out.println(movie);
 			
 			System.out.print("예매할 영화를 선택하세요 : ");
@@ -91,6 +92,7 @@ public class MainMenu extends AbstractMenu {
 		
 	}
 
+	//예매 취소하기
 	private void cancelReservation() {
 		checkReservation();
 		System.out.println("취소할 영화의 번호를 입력해주세요 : ");	
@@ -103,9 +105,9 @@ public class MainMenu extends AbstractMenu {
 			System.out.println("\n>> 취소되었습니다.");
 		}
 		
-		
 	}
 
+	//예매 확인하기
 	private void checkReservation() {
 		System.out.print("예매번호를 입력하세요 : ");
 		
